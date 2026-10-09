@@ -1,0 +1,234 @@
+.sidebar {
+    width: 16rem;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 1px solid hsla(0, 0%, 100%, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    z-index: 50;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.logo-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(to top right, hsl(var(--color-primary)), hsl(var(--color-secondary)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: white;
+}
+
+.wallet-card {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: hsla(0, 0%, 100%, 0.05);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.wallet-card:hover .wallet-glow {
+    opacity: 1;
+}
+
+.wallet-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, hsla(var(--color-primary) / 0.1), hsla(var(--color-secondary) / 0.1));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.wallet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 10;
+}
+
+.wallet-label {
+    font-size: 0.875rem;
+    color: hsl(var(--color-text-muted));
+    font-weight: 500;
+}
+
+.wallet-icon {
+    width: 1rem;
+    height: 1rem;
+    color: hsl(var(--color-text-muted));
+}
+
+.wallet-balance-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0.5rem;
+}
+
+.wallet-balance-row:last-child {
+    margin-bottom: 0;
+}
+
+.currency-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+}
+
+.dot.rp {
+    background: hsl(var(--color-secondary));
+    box-shadow: 0 0 10px hsla(var(--color-secondary) / 0.5);
+}
+
+.dot.cp {
+    background: hsl(var(--color-accent));
+    box-shadow: 0 0 10px hsla(var(--color-accent) / 0.5);
+}
+
+.currency-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #d1d5db;
+}
+
+.currency-value {
+    font-weight: 700;
+}
+
+.currency-value.rp {
+    color: hsl(var(--color-secondary));
+}
+
+.currency-value.cp {
+    color: hsl(var(--color-accent));
+}
+
+.nav-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    color: hsl(var(--color-text-muted));
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    color: white;
+    background: hsla(0, 0%, 100%, 0.05);
+}
+
+.nav-item.active {
+    background: hsla(0, 0%, 100%, 0.1);
+    color: white;
+    box-shadow: 0 10px 15px -3px hsla(var(--color-primary) / 0.1);
+}
+
+.nav-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .nav-icon {
+    transform: scale(1.1);
+}
+
+.user-mini-profile {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.mini-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid hsla(var(--color-primary) / 0.3);
+}
+
+.mini-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.mini-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mini-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: hsl(var(--color-text-muted));
+}
+
+.mini-star {
+    width: 0.75rem;
+    height: 0.75rem;
+    color: hsl(45, 90%, 50%);
+    fill: hsl(45, 90%, 50%);
+}
+
+.logout-btn {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: hsl(var(--color-text-muted));
+    transition: color 0.2s;
+}
+
+.logout-btn:hover {
+    color: white;
+    background: hsla(0, 0%, 100%, 0.05);
+}

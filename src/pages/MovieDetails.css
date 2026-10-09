@@ -1,0 +1,350 @@
+/* MovieDetails.css */
+
+.movie-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: hsl(var(--color-text-muted));
+    margin-bottom: 1.5rem;
+    transition: color var(--transition-fast);
+}
+
+.back-button:hover {
+    color: hsl(var(--color-text-main));
+}
+
+.back-button:hover .icon-back {
+    transform: translateX(-4px);
+}
+
+.icon-back {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform var(--transition-fast);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-backdrop {
+    position: relative;
+    aspect-ratio: 21/9;
+    width: 100%;
+}
+
+.backdrop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.backdrop-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, hsl(var(--color-bg)) 0%, hsla(var(--color-bg), 0.8) 50%, transparent 100%);
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+}
+
+.movie-title-hero {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    line-height: 1.1;
+}
+
+/* Rating Pills */
+.rating-pills {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.pill {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 0.875rem;
+}
+
+.pill-imdb {
+    background: rgba(234, 179, 8, 0.2);
+    border: 1px solid rgba(234, 179, 8, 0.4);
+}
+
+.pill-rotten {
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.pill-app {
+    background: rgba(167, 139, 250, 0.2);
+    border: 1px solid rgba(167, 139, 250, 0.4);
+}
+
+.pill-info {
+    background: rgba(255, 255, 255, 0.1);
+    color: hsl(var(--color-text-main));
+}
+
+.pill-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Action Buttons */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-hero {
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform var(--transition-fast), background var(--transition-fast);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hero:hover {
+    transform: scale(1.05);
+}
+
+.btn-watch-now {
+    background: white;
+    color: black;
+}
+
+.btn-watch-now:hover {
+    background: #f3f4f6;
+}
+
+.btn-suggest-friend {
+    background: hsl(var(--color-primary));
+    color: white;
+}
+
+.btn-suggest-friend:hover {
+    background: hsl(265, 89%, 60%);
+}
+
+/* Content Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .details-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Sections */
+.section-card {
+    background: hsl(var(--color-surface));
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid hsla(0, 0%, 100%, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: hsl(var(--color-text-main));
+}
+
+.title-accent {
+    width: 0.25rem;
+    height: 1.5rem;
+    background: hsl(var(--color-primary));
+    border-radius: var(--radius-full);
+}
+
+.synopsis-text {
+    color: hsl(var(--color-text-muted));
+    line-height: 1.6;
+    font-size: 1.125rem;
+}
+
+/* Friend Recommendations */
+.friend-recommendations {
+    background: hsla(265, 89%, 66%, 0.05);
+    border: 1px solid hsla(265, 89%, 66%, 0.2);
+}
+
+.friends-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.friend-card {
+    background: hsla(265, 89%, 66%, 0.1);
+    border: 1px solid hsla(265, 89%, 66%, 0.3);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: background var(--transition-fast);
+}
+
+.friend-card:hover {
+    background: hsla(265, 89%, 66%, 0.2);
+}
+
+.friend-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-full);
+    border: 2px solid hsla(265, 89%, 66%, 0.5);
+}
+
+.friend-info p:first-child {
+    font-weight: 600;
+    color: white;
+}
+
+.friend-info p:last-child {
+    font-size: 0.75rem;
+    color: hsl(265, 89%, 85%);
+}
+
+/* Genres */
+.genres-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.genre-tag {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: hsla(265, 89%, 66%, 0.1);
+    border: 1px solid hsla(265, 89%, 66%, 0.2);
+    color: hsl(var(--color-text-main));
+    transition: background var(--transition-fast);
+    cursor: pointer;
+}
+
+.genre-tag:hover {
+    background: hsla(265, 89%, 66%, 0.2);
+}
+
+/* Where to Watch */
+.watch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.watch-link {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsla(265, 89%, 66%, 0.1);
+    border: 1px solid hsla(265, 89%, 66%, 0.2);
+    color: hsl(var(--color-text-main));
+    transition: all var(--transition-fast);
+}
+
+.watch-link:hover {
+    background: hsla(265, 89%, 66%, 0.2);
+    border-color: hsla(265, 89%, 66%, 0.4);
+}
+
+.watch-platform {
+    font-weight: 500;
+}
+
+/* Movie Details Sidebar */
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: hsl(var(--color-text-muted));
+}
+
+.detail-value {
+    font-weight: 500;
+    color: hsl(var(--color-text-main));
+}
+
+.text-yellow {
+    color: #facc15;
+}
+
+.text-red {
+    color: #f87171;
+}
+
+.text-violet {
+    color: hsl(var(--color-primary));
+}

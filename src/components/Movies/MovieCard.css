@@ -1,0 +1,134 @@
+.movie-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 2/3;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px hsla(var(--color-primary) / 0.2);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.movie-card:hover .movie-poster {
+    transform: scale(1.1);
+}
+
+.movie-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.4), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.movie-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movie-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #d1d5db;
+    margin-bottom: 0.75rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.star-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    color: hsl(45, 90%, 50%);
+    fill: hsl(45, 90%, 50%);
+}
+
+.clock-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.movie-actions {
+    display: flex;
+    gap: 0.5rem;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover .movie-actions {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.btn-suggest {
+    flex: 1;
+    background: hsl(var(--color-primary));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    transition: background 0.2s;
+}
+
+.btn-suggest:hover {
+    background: hsl(265, 89%, 60%);
+}
+
+.btn-watch {
+    padding: 0.5rem;
+    background: hsla(0, 0%, 100%, 0.1);
+    border-radius: 0.5rem;
+    color: white;
+    transition: background 0.2s;
+}
+
+.btn-watch:hover {
+    background: hsla(0, 0%, 100%, 0.2);
+}
+
+.watched-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: hsla(142, 70%, 50%, 0.9);
+    color: white;
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+}

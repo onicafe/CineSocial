@@ -1,0 +1,15 @@
+.app-layout {
+    min-height: 100vh;
+    background-color: hsl(var(--color-bg));
+    color: hsl(var(--color-text-main));
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 16rem;
+    /* Match sidebar width */
+    padding: 2rem;
+    position: relative;
+    z-index: 0;
+}

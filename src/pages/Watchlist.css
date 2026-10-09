@@ -1,0 +1,145 @@
+.watchlist-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.watchlist-header {
+    margin-bottom: 32px;
+}
+
+.watchlist-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+}
+
+.watchlist-header p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+}
+
+.empty-watchlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.empty-watchlist h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0 8px 0;
+}
+
+.empty-watchlist p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 24px;
+}
+
+.browse-btn {
+    background: #8b5cf6;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.browse-btn:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+}
+
+.watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.watchlist-card {
+    background: rgba(30, 30, 35, 0.6);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    transition: transform 0.2s;
+}
+
+.watchlist-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.watchlist-poster {
+    width: 100px;
+    object-fit: cover;
+}
+
+.watchlist-content {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.watchlist-content h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.watchlist-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.watchlist-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.watch-btn {
+    flex: 1;
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    justify-content: center;
+}
+
+.watch-btn:hover {
+    background: rgba(34, 197, 94, 0.2);
+}
+
+.remove-btn {
+    background: rgba(239, 68, 68, 0.1);
+    color: #f87171;
+}
+
+.remove-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
